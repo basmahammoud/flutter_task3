@@ -7,8 +7,8 @@ ThemeData lightTheme = ThemeData(
   colorScheme: const ColorScheme.light(
     primary: Color(0xFF9C80E6),
     secondary: Color(0xFF5F4B8B),
-    background: Color(0xFFF6F6FA),
-    //surface: Colors.white,
+    //background: Color(0xFFF6F6FA),
+    surface: Color.fromARGB(255, 110, 62, 128),
   ),
   //لون الخلفية
   scaffoldBackgroundColor: const Color(0xFFF6F6FA),
@@ -61,7 +61,7 @@ ThemeData darkTheme = ThemeData(
     primary: Color(0xFFB39DDB),
     secondary: Color(0xFF591D59),
     //background: Color(0xFF591D59),
-    //surface: Color.fromARGB(255, 177, 177, 177),
+    surface: Color.fromARGB(255, 127, 66, 135),
   ),
 
   //لون الخلفية

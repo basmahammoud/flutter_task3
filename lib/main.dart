@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_task3/features/home/home.dart';
 import 'package:flutter_task3/core/theme/theme.dart';
+import 'package:flutter_task3/features/settings/settings.dart';
+
+import 'features/analytics/analytics.dart';
+import 'features/card/card.dart';
 
 void main() {
   runApp(const MyApp());
@@ -34,6 +38,15 @@ class _MyAppState extends State<MyApp> {
         '/': (context) => Home(
           isDark: _themeMode == ThemeMode.dark,
           onToggleTheme: toggleTheme,),
+        '/cards': (context) => CardsPage(
+            isDark: _themeMode == ThemeMode.dark,
+          onToggleTheme: toggleTheme,),
+        '/analytic': (context) => Analyticspage(
+            isDark: _themeMode == ThemeMode.dark,
+          onToggleTheme:toggleTheme,),
+        '/setting': (context) => Settings(
+          isDark: _themeMode == ThemeMode.dark,
+          onToggleTheme:toggleTheme,),
       },
       
     );

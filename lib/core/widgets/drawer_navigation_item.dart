@@ -52,21 +52,22 @@ class HomeDrawer extends StatelessWidget {
             leading: const Icon(Icons.card_giftcard),
             title: const Text("Cards"),
             onTap: () {
-              Navigator.pop(context);
+              Navigator.pushNamed(context, '/cards');
+
             },
           ),
           ListTile(
             leading: const Icon(Icons.analytics),
             title: const Text("Analytics"),
             onTap: () {
-              Navigator.pop(context);
+              Navigator.pushNamed(context, '/analytic');
             },
           ),
            ListTile(
             leading: const Icon(Icons.settings),
             title: const Text("settings"),
             onTap: () {
-              Navigator.pop(context);
+              Navigator.pushNamed(context, '/setting');
             },
           ),
 
