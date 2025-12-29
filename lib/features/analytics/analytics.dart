@@ -3,24 +3,21 @@ import 'package:flutter_task3/core/widgets/analytic_card.dart';
 import '../../core/widgets/custom_app_bar.dart';
 
 class Analyticspage extends StatelessWidget {
-  final bool isDark;
   final VoidCallback onToggleTheme;
 
   const Analyticspage({
     super.key,
-    required this.isDark,
     required this.onToggleTheme,
   });
 
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
+    final size =  MediaQuery.sizeOf(context);
 
     return Scaffold(
       appBar: CustomAppBar(
         title: "Analytics",
-        isDark: isDark,
         onToggleTheme: onToggleTheme,
       ),
       body: SingleChildScrollView(

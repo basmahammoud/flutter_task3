@@ -9,6 +9,7 @@ ThemeData lightTheme = ThemeData(
     secondary: Color(0xFF5F4B8B),
     //background: Color(0xFFF6F6FA),
     surface: Color.fromARGB(255, 110, 62, 128),
+    secondaryContainer:Color(0x6ECEA3FF),
   ),
   //لون الخلفية
   scaffoldBackgroundColor: const Color(0xFFF6F6FA),
@@ -62,6 +63,7 @@ ThemeData darkTheme = ThemeData(
     secondary: Color(0xFF591D59),
     //background: Color(0xFF591D59),
     surface: Color.fromARGB(255, 127, 66, 135),
+    secondaryContainer:Color(0xFF591D59),
   ),
 
   //لون الخلفية
@@ -97,6 +99,10 @@ ThemeData darkTheme = ThemeData(
     bodySmall: TextStyle(
       fontSize: 12,
       color: Colors.grey,
+    ),
+     titleSmall: TextStyle(
+      fontSize: 20,
+      color: Color.fromARGB(255, 202, 1, 1),
     ),
   ),
 );

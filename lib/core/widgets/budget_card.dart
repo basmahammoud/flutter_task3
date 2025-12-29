@@ -15,7 +15,7 @@ class BudgetCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    final size = MediaQuery.of(context).size;
+    final size =  MediaQuery.sizeOf(context);
 
     return Card(
       elevation: 10,
@@ -59,14 +59,6 @@ class BudgetCard extends StatelessWidget {
                       text: remaining,
                       style: Theme.of(context).textTheme.titleMedium,
                     ),
-                    // TextSpan(
-                    //   text: remaining,
-                    //   style: const TextStyle(
-                    //     fontSize: 20,
-                    //     fontWeight: FontWeight.bold,
-                    //     color: Colors.black,
-                    //   ),
-                    // ),
                     const TextSpan(
                       text: " AED",
                       style: TextStyle(

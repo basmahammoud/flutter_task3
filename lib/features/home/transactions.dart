@@ -6,7 +6,7 @@ class Transactions extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
+    final size =  MediaQuery.sizeOf(context);
 
     return Scaffold(
       body: SingleChildScrollView(

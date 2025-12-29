@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 
-class SettingButtoms extends StatelessWidget {
+class SettingButtons extends StatelessWidget {
   final bool isDark;
   final VoidCallback onToggleTheme;
+  
 
-  const SettingButtoms({
+  const SettingButtons({
     super.key,
     required this.isDark,
     required this.onToggleTheme,

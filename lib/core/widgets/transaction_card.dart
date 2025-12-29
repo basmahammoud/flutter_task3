@@ -16,14 +16,13 @@ class TransactionCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
+    final size = MediaQuery.sizeOf(context);
 
     return Card(
       elevation: 10,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(25)),
-      color: const Color(0x6ECEA3FF),
+      color: Theme.of(context).colorScheme.secondaryContainer,
       child: Container(
-        //width: 20,
         height: size.height * 0.12,
         padding: const EdgeInsets.all(20),
         child: Row(

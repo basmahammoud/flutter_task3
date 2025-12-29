@@ -37,12 +37,12 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
-    //Size size = MediaQuery.of(context).size;
+    //Size size =  MediaQuery.sizeOf(context);
 
     return Scaffold(
       appBar: CustomAppBar(
         title: "Finance Dashboard",
-        isDark: widget.isDark,
+        //isDark: widget.isDark,
         onToggleTheme: widget.onToggleTheme,
         bottom:  PreferredSize(
           preferredSize: const Size.fromHeight(50), 

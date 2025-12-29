@@ -13,7 +13,7 @@ class HomeDrawer extends StatelessWidget {
           //profile
           Row(
             children: [
-              Container(
+              SizedBox(
                 height: 60,
                 width: 60,
                 //padding: EdgeInsets.all(15),
@@ -29,17 +29,6 @@ class HomeDrawer extends StatelessWidget {
               ))
             ],
           ),
-          // UserAccountsDrawerHeader(
-          //   decoration: BoxDecoration(
-          //     color: Colors.white,
-          //   ),
-          //   currentAccountPicture: const CircleAvatar(
-          //     backgroundImage: AssetImage('assets/images/im1.png'),
-          //   ),
-          //   accountName: const Text("basma"),
-          //   accountEmail: const Text("basmahammoud@email.com"),
-          // ),
-          //navigation
           ListTile(
             leading: const Icon(Icons.home),
             title: const Text("Home"),

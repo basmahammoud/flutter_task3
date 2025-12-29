@@ -19,7 +19,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  ThemeMode _themeMode = ThemeMode.light;
+  ThemeMode _themeMode = ThemeMode.system;
 
      void toggleTheme(){
       setState(() {
@@ -38,11 +38,9 @@ class _MyAppState extends State<MyApp> {
         '/': (context) => Home(
           isDark: _themeMode == ThemeMode.dark,
           onToggleTheme: toggleTheme,),
-        '/cards': (context) => CardsPage(
-            isDark: _themeMode == ThemeMode.dark,
+        '/cards': (context) => CardsPage(          
           onToggleTheme: toggleTheme,),
         '/analytic': (context) => Analyticspage(
-            isDark: _themeMode == ThemeMode.dark,
           onToggleTheme:toggleTheme,),
         '/setting': (context) => Settings(
           isDark: _themeMode == ThemeMode.dark,
