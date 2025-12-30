@@ -54,7 +54,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
       body: TabBarView(
       controller: _tabController, 
         children: [
-         Overview_Tab(),
+         OverviewTab(),
           Transactions(),
           Budget(),
           ],

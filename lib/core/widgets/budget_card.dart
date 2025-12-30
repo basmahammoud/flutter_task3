@@ -22,7 +22,6 @@ class BudgetCard extends StatelessWidget {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(25),
       ),
-      color: const Color(0x6ECEA3FF),
       child: SizedBox(
         height: size.height * 0.18,
         child: Container(

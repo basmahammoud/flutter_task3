@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_task3/core/dialog/logout_dialog.dart';
 
 class HomeDrawer extends StatelessWidget {
   const HomeDrawer({super.key});
@@ -63,14 +64,13 @@ class HomeDrawer extends StatelessWidget {
           const Spacer(),
 
           ListTile(
-            leading: const Icon(Icons.logout, color: Colors.red),
+            leading: const Icon(
+              Icons.logout, color: Colors.red),
             title: const Text(
               "Logout",
               style: TextStyle(color: Colors.red),
             ),
-            onTap: () {
-              Navigator.pop(context);
-            },
+            onTap: () => showLogoutDialog(context),
           ),
         ],
       ),

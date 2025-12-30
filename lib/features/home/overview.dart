@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_task3/core/bottom_sheets/showQuickActions.dart' show showQuickActions;
 import 'package:flutter_task3/models/gallery_images.dart';
 
-class Overview_Tab extends StatelessWidget {
-  const Overview_Tab({super.key});
+class OverviewTab extends StatelessWidget {
+  const OverviewTab({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +12,7 @@ class Overview_Tab extends StatelessWidget {
     return  Scaffold(
   body: SingleChildScrollView(
     child: Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         const SizedBox(height: 20),
         Center(
@@ -84,6 +85,25 @@ class Overview_Tab extends StatelessWidget {
             },
           ),
         ),
+
+        SizedBox(height: size.height * 0.02),
+
+         MaterialButton(
+              color: const Color(0xFF9C80E6),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10),
+              ),
+              padding: EdgeInsets.all(15),
+              child: Text(
+                "Quick Action",
+                style: Theme.of(
+                  context,
+                ).textTheme.titleMedium?.copyWith(color: Colors.white),
+              ),
+             onPressed: () {
+              showQuickActions(context);
+             },
+            ),
       ],
     ),
   ),

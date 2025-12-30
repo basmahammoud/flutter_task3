@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_task3/core/bottom_sheets/show_modal_bottomSheet%20.dart';
 import 'package:flutter_task3/core/widgets/transaction_card.dart';
 
 class Transactions extends StatelessWidget {
@@ -56,7 +57,6 @@ class Transactions extends StatelessWidget {
             SizedBox(height: size.height * 0.03),
 
             MaterialButton(
-              onPressed: () {},
               color: const Color(0xFF9C80E6),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10),
@@ -69,6 +69,9 @@ class Transactions extends StatelessWidget {
                   context,
                 ).textTheme.titleMedium?.copyWith(color: Colors.white),
               ),
+             onPressed: () {
+              showAddTransaction(context);
+             },
             ),
           ],
         ),

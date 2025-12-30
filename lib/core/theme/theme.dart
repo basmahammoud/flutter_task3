@@ -10,12 +10,13 @@ ThemeData lightTheme = ThemeData(
     //background: Color(0xFFF6F6FA),
     surface: Color.fromARGB(255, 110, 62, 128),
     secondaryContainer:Color(0x6ECEA3FF),
+    onSecondary: Color(0xFF612F72),
   ),
   //لون الخلفية
   scaffoldBackgroundColor: const Color(0xFFF6F6FA),
 
   appBarTheme: const AppBarTheme(
-    backgroundColor: Color.fromARGB(255, 97, 47, 114),
+    backgroundColor: Color(0xFF612F72),
     foregroundColor: Colors.white,
     elevation: 0,
   ),
@@ -64,13 +65,14 @@ ThemeData darkTheme = ThemeData(
     //background: Color(0xFF591D59),
     surface: Color.fromARGB(255, 127, 66, 135),
     secondaryContainer:Color(0xFF591D59),
+    onSecondary: Color(0xFF53014C),
   ),
 
   //لون الخلفية
   scaffoldBackgroundColor: const Color(0xFF303030),
 
   appBarTheme: const AppBarTheme(
-    backgroundColor: Color.fromARGB(255, 83, 1, 76),
+    backgroundColor: Color(0xFF53014C),
     foregroundColor: Colors.white,
     elevation: 0,
   ),
