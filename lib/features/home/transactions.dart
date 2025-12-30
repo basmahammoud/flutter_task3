@@ -7,7 +7,7 @@ class Transactions extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final size =  MediaQuery.sizeOf(context);
+    final size = MediaQuery.sizeOf(context);
 
     return Scaffold(
       body: SingleChildScrollView(
@@ -18,40 +18,84 @@ class Transactions extends StatelessWidget {
               "Recent transaction",
               style: Theme.of(context).textTheme.titleLarge,
             ),
-             SizedBox(height: size.height * 0.03),
-             
-            TransactionCard(
-              icon: Icons.credit_card_rounded,
-              title: "Concert Tickets",
-              date: "April 23, 2024",
-              amount: "-\$150.9",
-            ),
+            SizedBox(height: size.height * 0.03),
+            LayoutBuilder(
+              builder: (context, constraints) {
+                final isTablet = constraints.maxWidth >= 600;
 
-            SizedBox(height: size.height * 0.02),
+                if (isTablet) {
+                  // Tablet 
+                  return Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 16),
+                    child: GridView.count(
+                      shrinkWrap: true,
+                      physics: const NeverScrollableScrollPhysics(),
+                      crossAxisCount: 2,
+                      crossAxisSpacing: 12,
+                      mainAxisSpacing: 12,
+                      children: const [
+                        TransactionCard(
+                          icon: Icons.credit_card_rounded,
+                          title: "Concert Tickets",
+                          date: "April 23, 2024",
+                          amount: "-\$150.9",
+                        ),
+                        TransactionCard(
+                          icon: Icons.car_rental,
+                          title: "Car Rent",
+                          date: "Mars 20, 2024",
+                          amount: "+\$350.9",
+                        ),
+                        TransactionCard(
+                          icon: Icons.shop,
+                          title: "Shopping",
+                          date: "April 23, 2024",
+                          amount: "-\$200.9",
+                        ),
+                        TransactionCard(
+                          icon: Icons.shop,
+                          title: "Shopping",
+                          date: "April 23, 2024",
+                          amount: "-\$200.9",
+                        ),
+                      ],
+                    ),
+                  );
+                }
 
-            TransactionCard(
-              icon: Icons.car_rental,
-              title: "Concert Tickets",
-              date: "Mars 20, 2024",
-              amount: "+\$350.9",
-            ),
-
-            SizedBox(height: size.height * 0.02),
-
-            TransactionCard(
-              icon: Icons.shop,
-              title: "Concert Tickets",
-              date: "April 23, 2024",
-              amount: "-\$200.9",
-            ),
-
-            SizedBox(height: size.height * 0.02),
-
-            TransactionCard(
-              icon: Icons.shop,
-              title: "Concert Tickets",
-              date: "April 23, 2024",
-              amount: "-\$200.9",
+                // Phone
+                return Column(
+                  children: const [
+                    TransactionCard(
+                      icon: Icons.credit_card_rounded,
+                      title: "Concert Tickets",
+                      date: "April 23, 2024",
+                      amount: "-\$150.9",
+                    ),
+                    SizedBox(height: 12),
+                    TransactionCard(
+                      icon: Icons.car_rental,
+                      title: "Car Rent",
+                      date: "Mars 20, 2024",
+                      amount: "+\$350.9",
+                    ),
+                    SizedBox(height: 12),
+                    TransactionCard(
+                      icon: Icons.shop,
+                      title: "Shopping",
+                      date: "April 23, 2024",
+                      amount: "-\$200.9",
+                    ),
+                    SizedBox(height: 12),
+                    TransactionCard(
+                      icon: Icons.shop,
+                      title: "Shopping",
+                      date: "April 23, 2024",
+                      amount: "-\$200.9",
+                    ),
+                  ],
+                );
+              },
             ),
 
             SizedBox(height: size.height * 0.03),
@@ -69,9 +113,9 @@ class Transactions extends StatelessWidget {
                   context,
                 ).textTheme.titleMedium?.copyWith(color: Colors.white),
               ),
-             onPressed: () {
-              showAddTransaction(context);
-             },
+              onPressed: () {
+                showAddTransaction(context);
+              },
             ),
           ],
         ),
