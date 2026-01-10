@@ -19,6 +19,7 @@ class Transactions extends StatelessWidget {
               style: Theme.of(context).textTheme.titleLarge,
             ),
             SizedBox(height: size.height * 0.03),
+            
             LayoutBuilder(
               builder: (context, constraints) {
                 final isTablet = constraints.maxWidth >= 600;
@@ -65,6 +66,7 @@ class Transactions extends StatelessWidget {
 
                 // Phone
                 return Column(
+                  spacing: 12.0,
                   children: const [
                     TransactionCard(
                       icon: Icons.credit_card_rounded,
@@ -72,21 +74,21 @@ class Transactions extends StatelessWidget {
                       date: "April 23, 2024",
                       amount: "-\$150.9",
                     ),
-                    SizedBox(height: 12),
+
                     TransactionCard(
                       icon: Icons.car_rental,
                       title: "Car Rent",
                       date: "Mars 20, 2024",
                       amount: "+\$350.9",
                     ),
-                    SizedBox(height: 12),
+
                     TransactionCard(
                       icon: Icons.shop,
                       title: "Shopping",
                       date: "April 23, 2024",
                       amount: "-\$200.9",
                     ),
-                    SizedBox(height: 12),
+
                     TransactionCard(
                       icon: Icons.shop,
                       title: "Shopping",
@@ -98,7 +100,7 @@ class Transactions extends StatelessWidget {
               },
             ),
 
-            SizedBox(height: size.height * 0.03),
+             SizedBox(height: size.height * 0.03),
 
             MaterialButton(
               color: const Color(0xFF9C80E6),

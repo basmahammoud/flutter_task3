@@ -26,12 +26,12 @@ class OverviewTab extends StatelessWidget {
               width: size.width * 0.8,
               padding: const EdgeInsets.all(20),
               child: Column(
+                spacing: 12,
                 children: [
                   const Text(
                     "Your Balance",
                     style: TextStyle(color: Colors.white70, fontSize: 20),
                   ),
-                  SizedBox(height: size.height * 0.03),
                   const Text(
                     "\$12,000",
                     style: TextStyle(
@@ -40,7 +40,6 @@ class OverviewTab extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  SizedBox(height: size.height * 0.03),
                   const Text(
                     "**** **** **** 6578",
                     style: TextStyle(color: Colors.white70, fontSize: 14),
